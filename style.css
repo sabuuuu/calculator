@@ -1,0 +1,99 @@
+@font-face {
+    font-family: numb;
+    src: url(fonts/num.TTF);
+    font-weight: 400;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: numb, sans-serif;
+    font-weight: lighter;
+}
+  
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #191818;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 600px;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+    background-color: black;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px 10px 0 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 120px;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+  
+.output .current-operand {
+    color: white;
+    font-size: 2rem;
+}
+
+button {
+    margin: 5px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#btn1 ,#btn2 {
+    background-color: #a0a0a0;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+#btn3,#btn4,#btn5,#btn6,#btn7 {
+    background-color: #f69906;
+    color: white;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+#btn8,#btn9,#btn10,#btn11,#btn12,#btn13,#btn14,#btn15,#btn16,#btn17,#btn18 {
+    background-color:#313131 ;
+    color: white;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+#btn4 {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover {
+    transform: scale(1.02);
+}
